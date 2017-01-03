@@ -43,10 +43,13 @@ $("#add-space").on("click", function(event) {
 $(document).ready(function() {
 
 $("button").on("click", function() {
+
+	//delete content 
+	$("#space-gifs").html("");
       
 
-      var spaceP2 = $(this).data("spaceP");
-      console.log($(this).data("spaceP"));
+      var spaceP2 = $(this).data("spacep");
+      console.log($(this).data("spacep"));
       
       var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         spaceP2 + "&api_key=dc6zaTOxFJmzC&limit=10";
