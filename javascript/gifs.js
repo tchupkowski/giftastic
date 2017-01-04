@@ -18,9 +18,15 @@ function printButtons(){
 
 	for (i=0; i<topics.length; i++){
 
-		$("#spaceButtons").append("<button type='button' data-spaceP=topics[i] class='btn btn-primary'>" + topics[i] + "</button>");
+		//$("#spaceButtons").append("<button type='button' class='btn btn-primary'>" + topics[i] + "</button>");
+		//$().attr("data-type", topics[i]);
+		//console.log(topics[i]);
 
-
+		var button = $("<button>");
+		button.addClass("btn btn-primary");
+		button.attr("data-type", topics[i]);
+		button.text(topics[i]);
+		$("#spaceButtons").append(button);
 	}
 }
 
@@ -28,7 +34,7 @@ function printButtons(){
 $("#add-space").on("click", function(event) {
 	// event.preventDefault() prevents submit button from trying to send a form.
 	// Using a submit button instead of a regular button allows the user to hit
-	// "Enter" instead of clicking the button if desired
+	// "Enter" instead of clicking the button if desired 
 	event.preventDefault();
 
 	// grab the text the user types into the input field
@@ -56,8 +62,8 @@ $("#add-space").on("click", function(event) {
 	$("#space-gifs").html("");
       
 
-      var spaceP2 = $(this).data("spacep");
-      console.log($(this).data("spacep"));
+      var spaceP2 = $(this).data("type");
+      console.log($(this).data("type"));
       
       var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         spaceP2 + "&api_key=dc6zaTOxFJmzC&limit=10";
