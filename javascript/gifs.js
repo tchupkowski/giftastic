@@ -5,7 +5,7 @@
 
 
 //Global Variables 
-var topics = ["mecury", "Venus", "Earth", "Mars", "Saturn", "space x", "nasa"];
+var topics = ["high jump", "penguin", "cheezburger", "esculator", "scooter" "Donald Trump", "fail", "robot opening door", "umbrella", "cat", "homework", "water", "meme", "mascot", "epic", "disney", "logic", "cartoon"];
 
 
 //Functions 
@@ -24,7 +24,7 @@ function printButtons(){
 
 		var button = $("<button>");
 		button.addClass("btn btn-primary");
-		button.attr("data-type", topics[i]);
+		button.attr("data-type", topics[i] + " fail");
 		button.text(topics[i]);
 		$("#spaceButtons").append(button);
 	}
