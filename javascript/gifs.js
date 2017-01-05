@@ -1,11 +1,11 @@
 //problems to fix
-	//all data is fish
+	//all data is fish - fixed now I think this comment is hillarious so I left it 
 	
 	
 
 
 //Global Variables 
-var topics = ["high jump", "penguin", "cheezburger", "esculator", "scooter" "Donald Trump", "fail", "robot opening door", "umbrella", "cat", "homework", "water", "meme", "mascot", "epic", "disney", "logic", "cartoon"];
+var topics = ["high jump", "penguin", "cheezburger", "esculator", "soccer", "scooter", "Donald Trump", "fail", "robot opening door", "umbrella", "cat", "homework", "water", "meme", "mascot", "epic", "disney", "logic", "cartoon"];
 
 
 //Functions 
@@ -65,7 +65,7 @@ $("#add-space").on("click", function(event) {
       var spaceP2 = $(this).data("type");
       console.log($(this).data("type"));
       
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         spaceP2 + "&api_key=dc6zaTOxFJmzC&limit=10";
       $.ajax({
           url: queryURL,
@@ -92,7 +92,7 @@ $("#add-space").on("click", function(event) {
 });
     
 //});
-
+//this function changes animates or freezes the gifs 
 //$(document).ready(function() {
 	$(document).on("click", ".gif", function() {
 
